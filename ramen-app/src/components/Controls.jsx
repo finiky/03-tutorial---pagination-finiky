@@ -2,19 +2,19 @@ import { useState } from 'react';
 import './Controls.css';
 
 const Controls = (props) => {
-  const { counter, setCounter } = props;
-  const [selectValue, setSelectValue] = useState(counter);
+  const { limit, setLimit } = props;
+  const [selectValue, setSelectValue] = useState(limit);
 
   const handleSelect = (e) => {
     const value = e.target.value;
     console.log(value);
     setSelectValue(value);
-    setCounter(value);
+    setLimit(value);
   };
 
   return (
     <div className="controls">
-      <p>Reviews to display: {counter}</p>
+      <p>Reviews to display: {limit}</p>
 
       <select value={selectValue} onChange={handleSelect}>
         <option value="10">10</option>

@@ -1,15 +1,15 @@
 import './ReviewCard.css';
 
 const ReviewCard = ({ review }) => {
-  const { URL, Brand, Variety, Stars } = review;
+  const { url, brand, variety, stars } = review;
 
   return (
     <div>
-      <a className="review-link" href={URL} target="_blank"rel="noreferrer" >
+      <a className="review-link" href={url} target="_blank"rel="noreferrer" >
         <div className="review-card">
-          <div className="review-prop variety"><strong>{Variety}</strong></div>
-          <div className="review-prop brand"><i>{Brand}</i></div>
-          <div className="review-prop stars">⭐ {'\u00A0'} {Stars}</div>
+          <div className="review-prop variety"><strong>{variety}</strong></div>
+          <div className="review-prop brand"><i>{brand}</i></div>
+          <div className="review-prop stars">⭐ {'\u00A0'} {stars}</div>
         </div>
       </a>
     </div>
